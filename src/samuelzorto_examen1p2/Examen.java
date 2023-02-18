@@ -1336,7 +1336,37 @@ public class Examen extends javax.swing.JFrame {
                                     if(pc2.getIp().equals(stri)){
                                         aaaa = false;
                                         if(pc1.getMark().equals(pc2.getMark())){
-                                            
+                                            String mama[] = pc1.getIp().split(".");
+                                            String mam[] = pc2.getIp().split(".");
+                                            if(mam[0].equals(mama[0]) && mam[1].equals(mama[1]) && mam[2].equals(mama[2])){
+                                                int pp1 = Integer.parseInt(mama[3]);
+                                                int pp2 = Integer.parseInt(mam[3]);
+                                                String p1 = Integer.toBinaryString(pp1);
+                                                String p2 = Integer.toBinaryString(pp2);
+                                                
+                                                String mas[] = pc1.getMark().split(".");
+                                                int pp = Integer.parseInt(mas[3]);
+                                                String tpp = Integer.toBinaryString(pp);
+                                                
+                                                int cont = 0;
+                                                for (int i = 0; i < tpp.length()-1; i++) {
+                                                    if(tpp.charAt(i) == '1'){
+                                                        cont++;
+                                                    }
+                                                }
+                                                boolean good = true;
+                                                for (int i = 0; i < cont; i++) {
+                                                    if(mam[3].charAt(i) != mama[3].charAt(i)){
+                                                        good = false;
+                                                    }
+                                                }
+                                                
+                                                if(good){
+                                                    System.out.println("Mensaje bueno");
+                                                }else{
+                                                    System.out.println("No conecta");
+                                                }
+                                            }
                                         }else{
                                             System.out.println(pc1.getHost() + "#ping_" + pc1.getIp() + "\n"
                                                     + "\n"
