@@ -52,7 +52,7 @@ public class Laptop extends PC{
 
     @Override
     public String toString() {
-        return "Laptop{" + "Marca=" + Marca + ", def1=" + def1 + ", def2=" + def2 + ", rgb=" + rgb + '}';
+        return "Laptop\n" + super.toString() + "Marca: " + Marca + "\ndefinicion: " + def1 + "x" + def2 + "\nrgb: "  + rgb;
     }
     
     

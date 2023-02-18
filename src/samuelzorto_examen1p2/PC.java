@@ -38,7 +38,7 @@ public class PC {
 
     @Override
     public String toString() {
-        return "PC{" + "ip=" + ip + ", mark=" + mark + ", host=" + host + '}';
+        return "ip: " + ip + "\nmark: " + mark + "\nhost: " + host + "\n";
     }
     
     

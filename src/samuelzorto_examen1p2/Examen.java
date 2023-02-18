@@ -74,6 +74,18 @@ public class Examen extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jf_lista = new javax.swing.JFrame();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jta_lista = new javax.swing.JTextArea();
+        jf_agregarlaptop = new javax.swing.JFrame();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -321,7 +333,7 @@ public class Examen extends javax.swing.JFrame {
                                 .addComponent(jt_mask, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                         .addComponent(jLabel10)
                         .addGap(43, 43, 43))
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -402,7 +414,7 @@ public class Examen extends javax.swing.JFrame {
                 .addGroup(jf_agregarpcLayout.createSequentialGroup()
                     .addGap(402, 402, 402)
                     .addComponent(jLabel9)
-                    .addContainerGap(200, Short.MAX_VALUE)))
+                    .addContainerGap(202, Short.MAX_VALUE)))
         );
         jf_agregarpcLayout.setVerticalGroup(
             jf_agregarpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -585,6 +597,113 @@ public class Examen extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/59db69d33752880e93e16efc_150x150.png"))); // NOI18N
         jLabel13.setText("Ingrese");
 
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+
+        jta_lista.setEditable(false);
+        jta_lista.setBackground(new java.awt.Color(255, 255, 255));
+        jta_lista.setColumns(20);
+        jta_lista.setForeground(new java.awt.Color(0, 0, 0));
+        jta_lista.setRows(5);
+        jScrollPane1.setViewportView(jta_lista);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 738, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jf_listaLayout = new javax.swing.GroupLayout(jf_lista.getContentPane());
+        jf_lista.getContentPane().setLayout(jf_listaLayout);
+        jf_listaLayout.setHorizontalGroup(
+            jf_listaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jf_listaLayout.setVerticalGroup(
+            jf_listaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel26.setFont(new java.awt.Font("Liberation Mono", 1, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel26.setText("Mask");
+
+        jLabel27.setFont(new java.awt.Font("Liberation Mono", 1, 24)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel27.setText("IP");
+
+        jLabel28.setFont(new java.awt.Font("Liberation Mono", 1, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel28.setText("Host");
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField1");
+
+        jTextField3.setText("jTextField1");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addGap(28, 28, 28)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(518, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jf_agregarlaptopLayout = new javax.swing.GroupLayout(jf_agregarlaptop.getContentPane());
+        jf_agregarlaptop.getContentPane().setLayout(jf_agregarlaptopLayout);
+        jf_agregarlaptopLayout.setHorizontalGroup(
+            jf_agregarlaptopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jf_agregarlaptopLayout.setVerticalGroup(
+            jf_agregarlaptopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -678,8 +797,8 @@ public class Examen extends javax.swing.JFrame {
 
     private void jb_agregarpcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarpcActionPerformed
         jf_agregarpc.setVisible(true);
-        jf_agregarpc.setLocationRelativeTo(null);
         jf_agregarpc.setSize(850,750);
+        jf_agregarpc.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_agregarpcActionPerformed
 
     private void jb_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminarActionPerformed
@@ -687,11 +806,15 @@ public class Examen extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_eliminarActionPerformed
 
     private void jb_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_listarActionPerformed
-        // TODO add your handling code here:
+        jf_lista.setVisible(true);
+        jf_lista.setSize(850,750);
+        jf_lista.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_listarActionPerformed
 
     private void jb_agregarlaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarlaptopActionPerformed
-        // TODO add your handling code here:
+        jf_agregarlaptop.setVisible(true);
+        jf_agregarlaptop.setSize(850,750);
+        jf_agregarlaptop.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_agregarlaptopActionPerformed
 
     private void jt_hostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_hostActionPerformed
@@ -737,6 +860,7 @@ public class Examen extends javax.swing.JFrame {
         mask = jt_mask.getText();
         
         pc.add(new Escritorio(ram, almacenamiento, tipoA, grafic, ip, mask, host));
+        jta_lista.setText(pc.indexOf(pc) + pc.toString());
         
         jt_almacenmiento.setText("");
         jt_ram.setText("");
@@ -819,6 +943,9 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -830,6 +957,12 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton jb_agregarlaptop;
     private javax.swing.JButton jb_agregarpc;
     private javax.swing.JButton jb_crud;
@@ -837,8 +970,10 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JButton jb_guardar;
     private javax.swing.JButton jb_ingrese;
     private javax.swing.JButton jb_listar;
+    private javax.swing.JFrame jf_agregarlaptop;
     private javax.swing.JFrame jf_agregarpc;
     private javax.swing.JFrame jf_crud;
+    private javax.swing.JFrame jf_lista;
     private javax.swing.JRadioButton jr_hhd;
     private javax.swing.JRadioButton jr_no;
     private javax.swing.JRadioButton jr_sdd;
@@ -848,6 +983,7 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JTextField jt_ip;
     private javax.swing.JTextField jt_mask;
     private javax.swing.JTextField jt_ram;
+    private javax.swing.JTextArea jta_lista;
     // End of variables declaration//GEN-END:variables
 
     
