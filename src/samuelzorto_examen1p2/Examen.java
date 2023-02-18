@@ -5,6 +5,7 @@
 package samuelzorto_examen1p2;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Examen extends javax.swing.JFrame {
      */
     public Examen() {
         initComponents();
-        
+
     }
 
     /**
@@ -788,7 +789,7 @@ public class Examen extends javax.swing.JFrame {
 
         jLabel38.setForeground(new java.awt.Color(0, 0, 0));
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/59db69d33752880e93e16efc_150x150.png"))); // NOI18N
-        jLabel38.setText("cahow");
+        jLabel38.setText("chorizo");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -830,7 +831,7 @@ public class Examen extends javax.swing.JFrame {
                                         .addComponent(jLabel28)
                                         .addGap(18, 18, 18)
                                         .addComponent(jt_ho, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                                 .addComponent(jLabel38))))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(147, 147, 147)
@@ -938,6 +939,11 @@ public class Examen extends javax.swing.JFrame {
         jLabel2.setText("MENU PARA EXAMEN");
 
         jb_ingrese.setText("Ingrese Ping");
+        jb_ingrese.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_ingreseActionPerformed(evt);
+            }
+        });
 
         jb_crud.setText("CRUD de PC's");
         jb_crud.addActionListener(new java.awt.event.ActionListener() {
@@ -1012,29 +1018,39 @@ public class Examen extends javax.swing.JFrame {
 
     private void jb_crudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crudActionPerformed
         jf_crud.setVisible(rootPaneCheckingEnabled);
-        jf_crud.setSize(600,500);
+        jf_crud.setSize(600, 500);
         jf_crud.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_crudActionPerformed
 
     private void jb_agregarpcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarpcActionPerformed
         jf_agregarpc.setVisible(true);
-        jf_agregarpc.setSize(850,750);
+        jf_agregarpc.setSize(850, 750);
         jf_agregarpc.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_agregarpcActionPerformed
 
     private void jb_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        int pos = Integer.parseInt(JOptionPane.showInputDialog("Posicion a eliminar"));
+        if (pos < pc.size() - 1 && pos >= 0) {
+            pc.remove(pos);
+        }
+        
+        jta_lista.removeAll();
+        for (PC pc1 : pc) {
+            jta_lista.setText(pc.indexOf(pc1) + pc.toString());
+        }
+
     }//GEN-LAST:event_jb_eliminarActionPerformed
 
     private void jb_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_listarActionPerformed
         jf_lista.setVisible(true);
-        jf_lista.setSize(850,750);
+        jf_lista.setSize(850, 750);
         jf_lista.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_listarActionPerformed
 
     private void jb_agregarlaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarlaptopActionPerformed
         jf_agregarlaptop.setVisible(true);
-        jf_agregarlaptop.setSize(850,750);
+        jf_agregarlaptop.setSize(850, 750);
         jf_agregarlaptop.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_agregarlaptopActionPerformed
 
@@ -1056,16 +1072,16 @@ public class Examen extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ingrese.setVisible(true);
-        ingrese.setSize(777,777);
+        ingrese.setSize(777, 777);
         jf_crud.setLocationRelativeTo(null);
         ingrese.setVisible(true);
-        ingrese.setSize(777,777);
+        ingrese.setSize(777, 777);
         jf_crud.setLocationRelativeTo(null);
         ingrese.setVisible(true);
-        ingrese.setSize(777,777);
+        ingrese.setSize(777, 777);
         jf_crud.setLocationRelativeTo(null);
         ingrese.setVisible(true);
-        ingrese.setSize(777,777);
+        ingrese.setSize(777, 777);
         jf_crud.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1079,10 +1095,35 @@ public class Examen extends javax.swing.JFrame {
         host = jt_host.getText();
         ip = jt_ip.getText();
         mask = jt_mask.getText();
-        
-        pc.add(new Escritorio(ram, almacenamiento, tipoA, grafic, ip, mask, host));
-        jta_lista.setText(pc.indexOf(pc) + pc.toString());
-        
+
+        boolean aaa = true;
+        String changoo[] = ip.split(".");
+        if (changoo.length == 4) {
+            for (String c : changoo) {
+                int ch = Integer.parseInt(c);
+                System.out.println(ch);
+                if (ch <= 0 || ch > 255) {
+                    aaa = false;
+                }
+            }
+        }
+
+        String chango[] = mask.split(".");
+        System.out.println(chango.length);
+        if (changoo.length == 4) {
+            for (String c : chango) {
+                int ch = Integer.parseInt(c);
+                if (ch <= 0 || ch > 255) {
+                    aaa = false;
+                }
+            }
+        }
+
+        if (aaa) {
+            pc.add(new Escritorio(ram, almacenamiento, tipoA, grafic, ip, mask, host));
+            jta_lista.setText(pc.indexOf(pc) + pc.toString());
+        }
+
         jt_almacenmiento.setText("");
         jt_ram.setText("");
         jt_host.setText("");
@@ -1130,26 +1171,52 @@ public class Examen extends javax.swing.JFrame {
         host = jt_ho.getText();
         ip = jt_i.getText();
         mask = jt_ma.getText();
-        
+
         Marca = jt_mar.getText();
         def1 = Integer.parseInt(jt_defi.getText());
         def2 = Integer.parseInt(jt_defi2.getText());
-        
-        pc.add(new Laptop(Marca,def1, def2, rgb, ip, mask, host));
-        jta_lista.setText(pc.indexOf(pc) + pc.toString());
-        
+        boolean aaa = true;
+        String changoo[] = ip.split(".");
+        if (changoo.length == 4) {
+            for (String c : changoo) {
+                int ch = Integer.parseInt(c);
+                if (ch <= 0 || ch > 255) {
+                    aaa = false;
+                }
+            }
+        }
+
+        String chango[] = mask.split(".");
+        if (changoo.length == 4) {
+            for (String c : chango) {
+                int ch = Integer.parseInt(c);
+                if (ch <= 0 || ch > 255) {
+                    aaa = false;
+                }
+            }
+        }
+
+        if (aaa) {
+            pc.add(new Laptop(Marca, def1, def2, rgb, ip, mask, host));
+            jta_lista.setText(pc.indexOf(pc) + pc.toString());
+        }
+
         jt_ho.setText("");
         jt_i.setText("");
         jt_ma.setText("");
         jt_mar.setText("");
         jt_defi.setText("");
         jt_defi2.setText("");
-        
+
     }//GEN-LAST:event_jb_guaActionPerformed
 
     private void jt_defi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_defi2ActionPerformed
-        
+
     }//GEN-LAST:event_jt_defi2ActionPerformed
+
+    private void jb_ingreseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ingreseActionPerformed
+        jPanel2.setVisible(false);
+    }//GEN-LAST:event_jb_ingreseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1270,16 +1337,15 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JTextArea jta_lista;
     // End of variables declaration//GEN-END:variables
 
-    
     //mis cosas
     private String ip, mask, host;
     private int ram, almacenamiento;
     protected String tipoA;
     protected boolean grafic;
-    
+
     protected String Marca;
     protected int def1, def2;
     protected boolean rgb;
-    
+
     private ArrayList<PC> pc = new ArrayList();
 }
