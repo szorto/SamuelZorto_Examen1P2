@@ -18,6 +18,7 @@ public class Examen extends javax.swing.JFrame {
      */
     public Examen() {
         initComponents();
+        
 
     }
 
@@ -1216,6 +1217,11 @@ public class Examen extends javax.swing.JFrame {
 
     private void jb_ingreseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ingreseActionPerformed
         jPanel2.setVisible(false);
+        System.out.println("INGRESE LA OPCION QUE DESEA\n"
+                + "[1]\n")
+                + "[2]\n")
+                + "[3]\n");
+        
     }//GEN-LAST:event_jb_ingreseActionPerformed
 
     /**
