@@ -5,6 +5,7 @@
 package samuelzorto_examen1p2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,7 +19,6 @@ public class Examen extends javax.swing.JFrame {
      */
     public Examen() {
         initComponents();
-        
 
     }
 
@@ -106,6 +106,13 @@ public class Examen extends javax.swing.JFrame {
         jb_guardar1 = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        jFrame1 = new javax.swing.JFrame();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jb_ingrese1 = new javax.swing.JButton();
+        jb_crud1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -927,6 +934,93 @@ public class Examen extends javax.swing.JFrame {
                     .addContainerGap(300, Short.MAX_VALUE)))
         );
 
+        jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel39.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/59db69d33752880e93e16efc_150x150.png"))); // NOI18N
+        jLabel39.setText("raoys mcqueen");
+
+        jLabel40.setFont(new java.awt.Font("DejaVu Sans Mono", 1, 36)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel40.setText("MENU PARA EXAMEN");
+
+        jb_ingrese1.setText("Ingrese Ping");
+        jb_ingrese1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_ingrese1ActionPerformed(evt);
+            }
+        });
+
+        jb_crud1.setText("CRUD de PC's");
+        jb_crud1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_crud1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setFont(new java.awt.Font("Liberation Sans", 0, 8)); // NOI18N
+        jButton2.setText("Ingrese");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel39)
+                        .addGap(189, 189, 189)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jb_crud1)
+                            .addComponent(jb_ingrese1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 318, Short.MAX_VALUE)
+                        .addComponent(jLabel40)
+                        .addGap(297, 297, 297))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(95, 95, 95))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel40)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addComponent(jLabel39))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(jb_ingrese1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(jb_crud1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -1035,7 +1129,7 @@ public class Examen extends javax.swing.JFrame {
         if (pos < pc.size() - 1 && pos >= 0) {
             pc.remove(pos);
         }
-        
+
         jta_lista.removeAll();
         for (PC pc1 : pc) {
             jta_lista.setText(pc.indexOf(pc1) + pc.toString());
@@ -1217,12 +1311,78 @@ public class Examen extends javax.swing.JFrame {
 
     private void jb_ingreseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ingreseActionPerformed
         jPanel2.setVisible(false);
-        System.out.println("INGRESE LA OPCION QUE DESEA\n"
-                + "[1]\n")
-                + "[2]\n")
-                + "[3]\n");
-        
+        boolean aa = true;
+
+        do {
+            System.out.print("INGRESE UNA IP:");
+            String j = entrada.next();
+            for (PC pc1 : pc) {
+                if (pc1.getIp().equals(j)) {
+                    aa = false;
+
+                    System.out.println("INGRESE LA OPCION QUE DESEA\n"
+                            + "[1] Ping\n"
+                            + "[2] Show\n"
+                            + "[3] Exit");
+
+                    int cn = entrad.nextInt();
+                    switch (cn) {
+                        case 1:
+                            boolean aaaa = true;
+                            do {
+                                System.out.print("Ingrese el ip de la computadora que desea ingresar: ");
+                                String stri = entrada.next();
+                                for (PC pc2 : pc) {
+                                    if(pc2.getIp().equals(stri)){
+                                        aaaa = false;
+                                        if(pc1.getMark().equals(pc2.getMark())){
+                                            
+                                        }else{
+                                            System.out.println(pc1.getHost() + "#ping_" + pc1.getIp() + "\n"
+                                                    + "\n"
+                                                    + "Pinging to " + pc2.getIp() + " with 32 bits of data\n"
+                                                            + "Request timed out\n"
+                                                            + "Request timed out\n"
+                                                            + "Request timed out\n"
+                                                            + "Request timed out\n"
+                                                                    + "\n"
+                                                                    + "Ping statistics for " + pc1.getIp() + ":\n"
+                                                                            + "     Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)\n"
+                                                                            + pc1.getHost() + "#");
+                                        }
+                                    }
+                                }
+                            } while (aaaa);
+
+                            break;
+                        case 2:
+                            System.out.println("Host: " + pc1.getHost() + "\n"
+                                    + "Ip: " + pc1.getIp() + "\n"
+                                    + "Mask: " + pc1.getMark());
+                            break;
+                        case 3:
+                            jPanel2.setVisible(true);
+                            break;
+                    }
+                }
+            }
+
+        } while (aa);
+        jPanel2.setVisible(true);
+
     }//GEN-LAST:event_jb_ingreseActionPerformed
+
+    private void jb_ingrese1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ingrese1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_ingrese1ActionPerformed
+
+    private void jb_crud1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crud1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_crud1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1265,6 +1425,8 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JFrame ingrese;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1297,7 +1459,9 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1309,15 +1473,18 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jb_agregarlaptop;
     private javax.swing.JButton jb_agregarpc;
     private javax.swing.JButton jb_crud;
+    private javax.swing.JButton jb_crud1;
     private javax.swing.JButton jb_eliminar;
     private javax.swing.JButton jb_gua;
     private javax.swing.JButton jb_guardar;
     private javax.swing.JButton jb_guardar1;
     private javax.swing.JButton jb_ingrese;
+    private javax.swing.JButton jb_ingrese1;
     private javax.swing.JButton jb_listar;
     private javax.swing.JFrame jf_agregarlaptop;
     private javax.swing.JFrame jf_agregarpc;
@@ -1352,6 +1519,8 @@ public class Examen extends javax.swing.JFrame {
     protected String Marca;
     protected int def1, def2;
     protected boolean rgb;
+    Scanner entrada = new Scanner(System.in);
+    Scanner entrad = new Scanner(System.in);
 
     private ArrayList<PC> pc = new ArrayList();
 }
